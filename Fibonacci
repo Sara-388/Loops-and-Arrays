@@ -1,0 +1,17 @@
+section .text
+    global _start
+
+_start:
+    mov eax, 0
+    mov ebx, 1
+    mov ecx, 8
+
+fib:
+    mov edx, eax
+    add edx, ebx
+    mov eax, ebx
+    mov ebx, edx
+    loop fib
+
+    mov eax, 1
+    int 0x80
